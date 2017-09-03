@@ -8,6 +8,6 @@ public class LejosPidBot {
      * @param args Command line arguments (not used)
      */
     public static void main(String[] args) {
-
+        System.out.print("Testing intellij commits.");
     }
 }
