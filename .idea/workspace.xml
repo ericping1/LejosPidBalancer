@@ -566,7 +566,7 @@
       <updated>1504414390108</updated>
       <workItem from="1504414394256" duration="1732000" />
       <workItem from="1504416341191" duration="3250000" />
-      <workItem from="1504459707884" duration="4395000" />
+      <workItem from="1504459707884" duration="4496000" />
     </task>
     <task id="LOCAL-00001" summary="Testing commit please ignore">
       <created>1504417423092</created>
@@ -617,11 +617,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504464133909</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added to Scooter class, set up pidbot class">
+      <created>1504464139674</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1504464139674</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9377000" />
+    <option name="totallyTimeSpent" value="9478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
