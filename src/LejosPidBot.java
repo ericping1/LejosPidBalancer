@@ -4,6 +4,7 @@ import lejos.hardware.lcd.GraphicsLCD;
 
 /**
  * LejosPidBot is the main application for the self balancing lego robot.
+ * Structure of program based off BjornChristensen
  *
  * @author Eric Ping
  */
