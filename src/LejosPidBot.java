@@ -4,6 +4,8 @@ import lejos.hardware.lcd.GraphicsLCD;
 
 /**
  * LejosPidBot is the main application for the self balancing lego robot.
+ *
+ * @author Eric Ping
  */
 public class LejosPidBot {
 
@@ -16,6 +18,9 @@ public class LejosPidBot {
         int screenWidth = lcd.getWidth();
         int screenHeight = lcd.getHeight();
         lcd.setFont(Font.getDefaultFont());
+        lcd.drawString("Pid balancer", screenWidth / 2, 40, GraphicsLCD.BASELINE|GraphicsLCD.HCENTER);
 
+        Scooter scooter = new Scooter();
+        scooter.start();
     }
 }
