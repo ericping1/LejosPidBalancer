@@ -4,7 +4,7 @@ import lejos.hardware.lcd.GraphicsLCD;
 
 /**
  * LejosPidBot is the main application for the self balancing lego robot.
- * Much of the code setting up the lejos environment taken from
+ * Much of the code setting up the lejos env ironment taken from
  * BjornChristenson's gyroboy (https://github.com/BjornChristensen/Gyroboy)
  *
  * Implementation of pid balancing and forward movement is different, allowing

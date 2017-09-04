@@ -38,23 +38,32 @@ public class Scooter extends Thread {
     public void run() {
         rightMotor.resetTachoCount();
         leftMotor.resetTachoCount();
+
+        // Calibrate gyroSensor (make sure sensor is pointed straight upwards
         gyroSensor.reset();
 
         // Notify user and set thread priority
         Sound.beepSequenceUp();
         Thread.currentThread().setPriority(MAX_PRIORITY);
 
-        SampleProvider gyroReader = gyroSensor.getRateMode();
-        float[] sample = new float[gyroReader.sampleSize()];
+        // Array for storing angle and velocity values
+        float[] angleAndRates = new float[2];
 
         // Loop until button pressed
         while (!Button.ESCAPE.isDown()) {
             long currentTime = System.nanoTime();
 
-            double error;
             double pValue;
+            double iValue = 0;
+            double dValue;
 
-            gyroSensor.fetchSample(sample, 0);
+            gyroSensor.getAngleAndRateMode().fetchSample(angleAndRates, 0);
+            pValue = angleAndRates[0];
+            iValue += pValue;
+            dValue = angleAndRates[1];
+
+            //double power
+
         }
 
         leftMotor.close();
