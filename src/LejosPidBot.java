@@ -7,8 +7,8 @@ import lejos.hardware.lcd.GraphicsLCD;
  * Much of the code setting up the lejos env ironment taken from
  * BjornChristenson's gyroboy (https://github.com/BjornChristensen/Gyroboy)
  *
- * Implementation of pid balancing and forward movement is different, allowing
- * for more severe speeds and tilt angles (ideally)
+ * Implementation of pid balancing and forward movement is simplified, allowing
+ * for more severe speeds and tilt angles and smoother movement (ideally)
  *
  * @author Eric Ping
  */

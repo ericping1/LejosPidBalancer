@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28399b2c-0441-4b74-bc50-57703ac2206e" name="Default" comment="Completed basic scooter class">
+    <list default="true" id="28399b2c-0441-4b74-bc50-57703ac2206e" name="Default" comment="Removed unused variables">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scooter.java" afterPath="$PROJECT_DIR$/src/Scooter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LejosPidBot.java" afterPath="$PROJECT_DIR$/src/LejosPidBot.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +29,8 @@
       <file leaf-file-name="LejosPidBot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LejosPidBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="250">
+              <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +72,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/LejosPidBot.java" />
         <option value="$PROJECT_DIR$/src/Scooter.java" />
+        <option value="$PROJECT_DIR$/src/LejosPidBot.java" />
       </list>
     </option>
   </component>
@@ -558,7 +558,7 @@
       <workItem from="1504414394256" duration="1732000" />
       <workItem from="1504416341191" duration="3250000" />
       <workItem from="1504459707884" duration="7789000" />
-      <workItem from="1504548646332" duration="10012000" />
+      <workItem from="1504548646332" duration="10260000" />
     </task>
     <task id="LOCAL-00001" summary="Testing commit please ignore">
       <created>1504417423092</created>
@@ -665,11 +665,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504556642226</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Removed unused variables">
+      <created>1504566613647</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1504566613647</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22783000" />
+    <option name="totallyTimeSpent" value="23031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -719,7 +726,8 @@
     <MESSAGE value="Updated scooter class" />
     <MESSAGE value="Changed Scooter class gyroSensor to invoke getAngleAndRateMode() instead of fetchSample() directly" />
     <MESSAGE value="Completed basic scooter class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed basic scooter class" />
+    <MESSAGE value="Removed unused variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -851,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LejosPidBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="250">
+          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
