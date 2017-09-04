@@ -25,12 +25,6 @@ public class Scooter extends Thread {
     private double iCoeff = 0;
     private double dCoeff = .1;
 
-    // Previous time the sensor recorded data
-    private long lastTime = System.nanoTime();
-
-    // Previous offset between the gyroSensor and the zero point
-    private double error;
-
     /**
      * Method continuously balances the scooter, taking data every 10
      * milliseconds and adjusting the motor accordingly
@@ -51,8 +45,6 @@ public class Scooter extends Thread {
 
         // Loop until button pressed
         while (!Button.ENTER.isDown()) {
-            long currentTime = System.nanoTime();
-
             double pValue;
             double iValue = 0;
             double dValue;
