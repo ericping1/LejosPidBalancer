@@ -51,9 +51,10 @@ public class Scooter extends Thread {
         while (!Button.ESCAPE.isDown()) {
             long currentTime = System.nanoTime();
 
-            double error = 0;
-            double pValue = 0;
+            double error;
+            double pValue;
 
+            gyroSensor.fetchSample(sample, 0);
         }
 
         leftMotor.close();
