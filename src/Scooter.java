@@ -50,7 +50,7 @@ public class Scooter extends Thread {
         float[] angleAndRates = new float[2];
 
         // Loop until button pressed
-        while (!Button.ESCAPE.isDown()) {
+        while (!Button.ENTER.isDown()) {
             long currentTime = System.nanoTime();
 
             double pValue;
@@ -62,7 +62,9 @@ public class Scooter extends Thread {
             iValue += pValue;
             dValue = angleAndRates[1];
 
-            //double power
+            double power = pCoeff * pValue + iCoeff * iValue + dCoeff * dValue;
+            rightMotor.setPower((int) power);
+            leftMotor.setPower((int) power);
 
         }
 
