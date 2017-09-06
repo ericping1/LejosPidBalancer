@@ -16,6 +16,7 @@ public class LejosPidBot {
 
     /**
      * Main method of program that creates an scooter object which drive around
+     *
      * @param args Command line arguments (not used)
      */
     public static void main(String[] args) {

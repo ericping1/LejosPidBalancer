@@ -24,6 +24,7 @@ public class Scooter extends Thread {
     private double pCoeff = 15;
     private double iCoeff = 0;
     private double dCoeff = .1;
+    int i;
 
     /**
      * Method continuously balances the scooter, taking data every 10
@@ -54,7 +55,7 @@ public class Scooter extends Thread {
             iValue += pValue;
             dValue = angleAndRates[1];
 
-            double power = pCoeff * pValue + iCoeff * iValue + dCoeff * dValue;
+            double power = pCoeff * pValue + iCoeff * iValue - dCoeff * dValue;
             rightMotor.setPower((int) power);
             leftMotor.setPower((int) power);
 
