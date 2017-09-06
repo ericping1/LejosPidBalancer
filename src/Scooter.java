@@ -1,10 +1,12 @@
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
+import lejos.hardware.lcd.LCD;
 import lejos.hardware.motor.UnregulatedMotor;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3GyroSensor;
 import lejos.robotics.SampleProvider;
+import lejos.utility.Delay;
 
 /**
  * Scooter class represents the two wheeled self balacing robot. The run()
@@ -21,10 +23,9 @@ public class Scooter extends Thread {
     private EV3GyroSensor gyroSensor = new EV3GyroSensor(SensorPort.S1);
 
     // Values for the pid controller
-    private double pCoeff = 15;
+    private double pCoeff = 16;
     private double iCoeff = 0;
-    private double dCoeff = .1;
-    int i;
+    private double dCoeff = .5;
 
     /**
      * Method continuously balances the scooter, taking data every 10
@@ -42,7 +43,8 @@ public class Scooter extends Thread {
         Thread.currentThread().setPriority(MAX_PRIORITY);
 
         // Array for storing angle and velocity values
-        float[] angleAndRates = new float[2];
+        float[] angleAndRates1 = new float[2];
+        float[] angleAndRAtes2 = new float[2];
 
         // Loop until button pressed
         while (!Button.ENTER.isDown()) {
@@ -50,14 +52,19 @@ public class Scooter extends Thread {
             double iValue = 0;
             double dValue;
 
-            gyroSensor.getAngleAndRateMode().fetchSample(angleAndRates, 0);
-            pValue = angleAndRates[0];
+            gyroSensor.getAngleAndRateMode().fetchSample(angleAndRates1, 0);
+            gyroSensor.getAngleAndRateMode().fetchSample(angleAndRAtes2, 0);
+            pValue = (angleAndRates1[0] + angleAndRAtes2[0]) / 2;
             iValue += pValue;
-            dValue = angleAndRates[1];
+            dValue = (angleAndRates1[1] + angleAndRAtes2[1]) / 2;
 
-            double power = pCoeff * pValue + iCoeff * iValue - dCoeff * dValue;
+            LCD.drawInt((int) dValue, 0, 0);
+
+            double power = -1.0 * pCoeff * pValue + iCoeff * iValue + -1.0 * dCoeff * dValue;
             rightMotor.setPower((int) power);
             leftMotor.setPower((int) power);
+
+            Delay.msDelay(10);
 
         }
 
