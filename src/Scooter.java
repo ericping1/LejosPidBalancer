@@ -23,9 +23,9 @@ public class Scooter extends Thread {
     private EV3GyroSensor gyroSensor = new EV3GyroSensor(SensorPort.S1);
 
     // Values for the pid controller
-    private double pCoeff = 16;
+    private double pCoeff = 55;
     private double iCoeff = 0;
-    private double dCoeff = .5;
+    private double dCoeff = .35;
 
     /**
      * Method continuously balances the scooter, taking data every 10
@@ -43,8 +43,8 @@ public class Scooter extends Thread {
         Thread.currentThread().setPriority(MAX_PRIORITY);
 
         // Array for storing angle and velocity values
-        float[] angleAndRates1 = new float[2];
-        float[] angleAndRAtes2 = new float[2];
+        float[] angle = new float[1];
+        float[] speed = new float[1];
 
         // Loop until button pressed
         while (!Button.ENTER.isDown()) {
@@ -52,13 +52,22 @@ public class Scooter extends Thread {
             double iValue = 0;
             double dValue;
 
-            gyroSensor.getAngleAndRateMode().fetchSample(angleAndRates1, 0);
-            gyroSensor.getAngleAndRateMode().fetchSample(angleAndRAtes2, 0);
-            pValue = (angleAndRates1[0] + angleAndRAtes2[0]) / 2;
-            iValue += pValue;
-            dValue = (angleAndRates1[1] + angleAndRAtes2[1]) / 2;
+            gyroSensor.getRateMode().fetchSample(speed, 0);
+            gyroSensor.getAngleMode().fetchSample(angle, 0);
 
-            LCD.drawInt((int) dValue, 0, 0);
+            pValue = angle[0];
+
+            if (pValue > 270) {
+                pValue = pValue - 360;
+            }
+            if (pValue < -270) {
+                pValue = 360 + pValue;
+            }
+
+            iValue += pValue;
+            dValue = 0;
+
+            LCD.drawString("" + pValue, 0, 0);
 
             double power = -1.0 * pCoeff * pValue + iCoeff * iValue + -1.0 * dCoeff * dValue;
             rightMotor.setPower((int) power);
