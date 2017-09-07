@@ -23,9 +23,9 @@ public class Scooter extends Thread {
     private EV3GyroSensor gyroSensor = new EV3GyroSensor(SensorPort.S1);
 
     // Values for the pid controller
-    private double pCoeff = 55;
+    private double pCoeff = 70;  //60
     private double iCoeff = 0;
-    private double dCoeff = .35;
+    private double dCoeff = .10;  //.15
 
     /**
      * Method continuously balances the scooter, taking data every 10
@@ -65,11 +65,15 @@ public class Scooter extends Thread {
             }
 
             iValue += pValue;
-            dValue = 0;
+            dValue = speed[0];
 
-            LCD.drawString("" + pValue, 0, 0);
+            //LCD.drawString("" + pValue, 0, 0);
+
 
             double power = -1.0 * pCoeff * pValue + iCoeff * iValue + -1.0 * dCoeff * dValue;
+
+            LCD.drawString("" + power, 0, 0);
+
             rightMotor.setPower((int) power);
             leftMotor.setPower((int) power);
 
