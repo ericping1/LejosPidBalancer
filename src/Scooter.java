@@ -23,9 +23,9 @@ public class Scooter extends Thread {
     private EV3GyroSensor gyroSensor = new EV3GyroSensor(SensorPort.S1);
 
     // Values for the pid controller
-    private double pCoeff = 70;  //60
+    private double pCoeff = 60;  //60
     private double iCoeff = 0;
-    private double dCoeff = .10;  //.15
+    private double dCoeff = .159;  //.155
 
     /**
      * Method continuously balances the scooter, taking data every 10
@@ -57,6 +57,7 @@ public class Scooter extends Thread {
 
             pValue = angle[0];
 
+            // Convert reflex angles to acute angles
             if (pValue > 270) {
                 pValue = pValue - 360;
             }
