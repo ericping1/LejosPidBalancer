@@ -29,18 +29,15 @@ public class Scooter extends Thread {
     private EV3GyroSensor gyroSensor = new EV3GyroSensor(SensorPort.S1);
 
     // Values for the pid controller
-    private double pCoeff = 2.2;  //1.9
-    private double iCoeff = .07;    //.1
-    private double dCoeff = 1.3;  //1.3
+    private double pCoeff = 2.2;
+    private double iCoeff = .07;
+    private double dCoeff = 1.3;
 
     /**
      * Method continuously balances the scooter, taking data every 10
      * milliseconds and adjusting the motor accordingly
      */
     public void run() {
-        rightMotor.resetTachoCount();
-        leftMotor.resetTachoCount();
-
         // Calibrate gyroSensor (make sure sensor is pointed straight upwards
         gyroSensor.reset();
 
@@ -63,6 +60,7 @@ public class Scooter extends Thread {
             gyroSensor.getRateMode().fetchSample(speed, 0);
             gyroSensor.getAngleMode().fetchSample(angle, 0);
 
+            // Set p value
             pValue = angle[0];
 
             // Convert reflex angles to acute angles
@@ -73,12 +71,14 @@ public class Scooter extends Thread {
                 pValue = FULL_CIRCLE + pValue;
             }
 
+            // Set i and d values of PID controller
             iValue = power;
             dValue = speed[0];
 
             // Counter-intuitive, add by integral to change the angle
             power = power + -1.0 * pCoeff * pValue + 1 * iCoeff * iValue + -1.0 * dCoeff * dValue;
 
+            // Prevent drift from getting out of control
             if (power > POWER_THRESHHOLD) {
                 power = MAX_POWER;
             }
@@ -86,14 +86,10 @@ public class Scooter extends Thread {
                 power = -1.0 * MAX_POWER;
             }
 
-
+            // Set power and delay
             rightMotor.setPower((int) power);
             leftMotor.setPower((int) power);
-
-            LCD.drawString("" + power, 0, 0);
-
             Delay.msDelay(10);
-
         }
 
         leftMotor.close();
