@@ -6,9 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28399b2c-0441-4b74-bc50-57703ac2206e" name="Default" comment="Fixed bad coding practices">
+    <list default="true" id="28399b2c-0441-4b74-bc50-57703ac2206e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scooter.java" afterPath="$PROJECT_DIR$/src/Scooter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="Scooter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Scooter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="40" column="69" lean-forward="false" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+            <state relative-caret-position="580">
+              <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -243,7 +242,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -676,7 +675,7 @@
       <workItem from="1504763125324" duration="926000" />
       <workItem from="1504804837424" duration="6461000" />
       <workItem from="1504917481458" duration="1041000" />
-      <workItem from="1504935689434" duration="160000" />
+      <workItem from="1504935689434" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="Testing commit please ignore">
       <created>1504417423092</created>
@@ -860,11 +859,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504928818628</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Removed unnecessary comments and method calls">
+      <created>1504935887119</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1504935887119</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69674000" />
+    <option name="totallyTimeSpent" value="69827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -926,7 +932,8 @@
     <MESSAGE value="Fixed acceleration (and not velocity) based reactions" />
     <MESSAGE value="Updated integral component of controller and controlled for scooter drifting" />
     <MESSAGE value="Fixed bad coding practices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bad coding practices" />
+    <MESSAGE value="Removed unnecessary comments and method calls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary comments and method calls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1352,8 +1359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scooter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="40" column="69" lean-forward="false" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+        <state relative-caret-position="580">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
           <folding />
         </state>
       </provider>
