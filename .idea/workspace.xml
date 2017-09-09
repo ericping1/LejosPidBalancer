@@ -56,8 +56,8 @@
       <file leaf-file-name="Scooter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Scooter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="650">
+              <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -838,11 +838,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504905807886</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fixed acceleration (and not velocity) based reactions">
+      <created>1504921448476</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1504921448476</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63739000" />
+    <option name="totallyTimeSpent" value="66412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -901,7 +908,8 @@
     <MESSAGE value="Edited PID coefficients after extensive testing with real scooter." />
     <MESSAGE value="More tuning of PID coefficients." />
     <MESSAGE value="Edited PID controller to modify acceleration and not velocity after changes in angle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited PID controller to modify acceleration and not velocity after changes in angle" />
+    <MESSAGE value="Fixed acceleration (and not velocity) based reactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed acceleration (and not velocity) based reactions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1327,8 +1335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scooter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="650">
+          <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
           <folding />
         </state>
       </provider>
