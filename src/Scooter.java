@@ -38,6 +38,7 @@ public class Scooter extends Thread {
      * milliseconds and adjusting the motor accordingly
      */
     public void run() {
+
         // Calibrate gyroSensor (make sure sensor is pointed straight upwards
         gyroSensor.reset();
 
