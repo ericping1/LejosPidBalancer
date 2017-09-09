@@ -17,6 +17,12 @@ import lejos.utility.Delay;
  * @author Eric Ping
  */
 public class Scooter extends Thread {
+    private static final double THREE_QUARTERS_TURN = 270;
+    private static final double NEGATIVE_THREE_QUARTERS_TURN = -270;
+    private static final double FULL_CIRCLE = 360;
+    private static final double POWER_THRESHHOLD = 70;
+    private static final double MAX_POWER = 100;
+
     // Two wheel motors and gyro sensor
     private UnregulatedMotor leftMotor = new UnregulatedMotor(MotorPort.A);
     private UnregulatedMotor rightMotor = new UnregulatedMotor(MotorPort.B);
@@ -47,37 +53,37 @@ public class Scooter extends Thread {
         float[] speed = new float[1];
 
         double power = 0;
+        double pValue;
+        double iValue;
+        double dValue;
+
         // Loop until button pressed
         while (!Button.ENTER.isDown()) {
             // Note: move these variables to the outside of while loop
-            double pValue;
-            double iValue = power;
-            double dValue;
-
             gyroSensor.getRateMode().fetchSample(speed, 0);
             gyroSensor.getAngleMode().fetchSample(angle, 0);
 
             pValue = angle[0];
 
             // Convert reflex angles to acute angles
-            if (pValue > 270) {
-                pValue = pValue - 360;
+            if (pValue > THREE_QUARTERS_TURN) {
+                pValue = pValue - FULL_CIRCLE;
             }
-            if (pValue < -270) {
-                pValue = 360 + pValue;
+            if (pValue < NEGATIVE_THREE_QUARTERS_TURN) {
+                pValue = FULL_CIRCLE + pValue;
             }
 
             iValue = power;
             dValue = speed[0];
 
-            // Counterintuitive, add by integral to change the angle
+            // Counter-intuitive, add by integral to change the angle
             power = power + -1.0 * pCoeff * pValue + 1 * iCoeff * iValue + -1.0 * dCoeff * dValue;
 
-            if (power > 70) {
-                power = 100;
+            if (power > POWER_THRESHHOLD) {
+                power = MAX_POWER;
             }
-            if (power < -70) {
-                power = -100;
+            if (power < -1.0 * POWER_THRESHHOLD) {
+                power = -1.0 * MAX_POWER;
             }
 
 
