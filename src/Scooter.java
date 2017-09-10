@@ -29,9 +29,9 @@ public class Scooter extends Thread {
     private EV3GyroSensor gyroSensor = new EV3GyroSensor(SensorPort.S1);
 
     // Values for the pid controller
-    private double pCoeff = 2.2;
-    private double iCoeff = .07;
-    private double dCoeff = 1.3;
+    private double pCoeff = 2.2;  // 2.2
+    private double iCoeff = .07;  // .07
+    private double dCoeff = 1.3;  // 1.3
 
     /**
      * Method continuously balances the scooter, taking data every 10

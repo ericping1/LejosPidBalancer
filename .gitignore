@@ -1,5 +1,4 @@
 LejosPIDBalancing.iml
 out/
 .idea/workspace.xml
-src/META-INF/
-LejosPidBalancing.iml
+LejosPidBalancing.iml.idea
