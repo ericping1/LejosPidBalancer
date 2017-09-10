@@ -97,4 +97,6 @@ public class Scooter extends Thread {
         rightMotor.close();
         gyroSensor.close();
     }
+
+    //private
 }
