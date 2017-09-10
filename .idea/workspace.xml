@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7294a088-6c6f-433d-8f41-343725dc89f3" name="Default" comment="Fixed self inflicted git pull bug">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="7294a088-6c6f-433d-8f41-343725dc89f3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/LejosPidBalancing.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -545,7 +548,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505005236612</updated>
-      <workItem from="1505005239229" duration="1766000" />
+      <workItem from="1505005239229" duration="1821000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed self inflicted git pull bug">
       <created>1505005323791</created>
@@ -554,11 +557,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505005323791</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added files to .gitignore">
+      <created>1505008549267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505008549267</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1766000" />
+    <option name="totallyTimeSpent" value="1821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -602,7 +612,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed self inflicted git pull bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed self inflicted git pull bug" />
+    <MESSAGE value="Added files to .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files to .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
